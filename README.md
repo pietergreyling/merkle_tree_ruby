@@ -58,3 +58,10 @@ tree = MerkleTree.new(data)
 puts "Merkle Root: #{tree.root}"
 
 ```
+
+- Each data item is hashed (SHA256).
+- Leaves are paired, concatenated, and then hashed again to form parent nodes.
+- If there is an odd number of nodes, the last one is duplicated to make a pair.
+- This continues until a single root hash remains: 
+**The Merkle Root**
+
